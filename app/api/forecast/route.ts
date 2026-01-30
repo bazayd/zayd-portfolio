@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export const revalidate = 600; // cache for 10 minutes (nice for recruiter demo)
+export const revalidate = 600; // caching for 10 minutes
 
 // responds to GET requests
 // equivalent to GET /api/forecast?lat=...&lon=...
@@ -22,7 +22,7 @@ export async function GET(req: Request) {
 
   // user agent header required
   const headers = {
-    "User-Agent": "brandon-portfolio (brandon.arriaga@sjsu.edu)",
+    "User-Agent": "zayd-portfolio (brandon.arriaga@sjsu.edu)",
     Accept: "application/geo+json",
   };
 
@@ -79,5 +79,6 @@ export async function GET(req: Request) {
     state: points?.properties?.relativeLocation?.properties?.state,
     updated: forecast?.properties?.updated,
     periods: periods.slice(0, 3), // keep it simple: today/tonight/tomorrow
+    timeZone: points?.properties?.timeZone
   });
 }

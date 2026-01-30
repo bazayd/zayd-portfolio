@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from 'react';
+import { useEffect, useState, FormEvent } from 'react';
 
 type Period = {
   name: string;
@@ -15,12 +15,60 @@ type Period = {
 }
 
 export default function Home() {
+  const [ locationInput, setLocationInput] = useState("");
+  
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setLocationInput(e.target.value);
+  }
+
+   const [ coordinates, setCoordinates ] = useState<null | {
+    lat?: string;
+    lon?: string;
+  }>(null);
+
+  const handleSubmit = (event: any) => {
+    event.preventDefault();
+    
+    const trimmed = locationInput.trim();
+    const [city, state] = trimmed.split(",").map(s => s.trim());
+
+    if (!city || !state) {
+      return;
+    }
+
+    getCoordinates(city, state);
+    
+  }
+
+
+ 
+
+  async function getCoordinates(city: string, state: string) {
+    try {
+      const res = await fetch(`/api/location?city=${encodeURIComponent(city)}&state=${encodeURIComponent(state)}`);
+      if (!res.ok) throw new Error(`Request failed: ${res.status}`)
+      const data = await res.json();
+      setCoordinates(data);
+
+      if(data?.lat && data?.lon) {
+        getForecast(data.lat, data.lon);
+      }
+
+    } catch (e: unknown) {
+      const message = e instanceof Error ? e.message : String(e);
+    }
+  }
+
+  
+
   // union type; either null or object with following shape using loc, state, upd, and periods(slice)
   const [forecast, setForecast] = useState<null | {
     location?: string;
     state?: string;
     updated?: string;
     periods: Period[];
+    timeZone?: string;
   }>(null);
 
   // loading for loading spinners, if data is loading or finished
@@ -53,10 +101,10 @@ export default function Home() {
   const [active, setActive] = useState(false)
 
   return (
-    <div className="flex flex-col min-h-screen items-center justify-between bg-zinc-50 font-sans ">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center m py-32 px-10 bg-white sm:items-start h-10 mb-auto">
+    <div className="flex flex-col items-center bg-zinc-50 font-sans">
+      <main className="w-full max-w-3xl py-32 px-10 bg-white">
         
-        <div className="grid grid-cols-2 gap-x-7 place-items-center">
+        <div className="grid grid-cols-2  place-items-center">
 
           {/* <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
             Edit this file (page.tsx) 
@@ -96,9 +144,25 @@ export default function Home() {
           </div>
         </div>
         
+
         {/* Forecast card */}
-        <div className="mt-10 w-full rounded-lg border border-zinc-200 p-5">
-          <h2 className="text-lg font-semibold text-black">Weather Forecast</h2>
+        <div className="mt-20 w-full rounded-lg border border-zinc-200 p-5">
+          <h2 className="text-lg font-semibold text-black">Brandon's Weather Forecast</h2>
+          <form className="w-full max-w-sm" onSubmit={handleSubmit}>
+            <div className="flex items-center border-b border-teal-500 py-2">
+              <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+               value={locationInput}
+               onChange={handleChange}
+               type="text"
+               id="locationInput"
+                placeholder="City, State" 
+                aria-label="Full name"/>
+              <button className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded"
+               type="submit">
+                Search
+              </button>
+            </div>
+          </form>
 
           {loading && <p className="text-zinc-600 mt-2">Loading forecast...</p>}
           {error && <p className="text-red-600 mt-2">{error}</p>}
@@ -106,7 +170,7 @@ export default function Home() {
           {forecast && !loading && (
             <>
               <p className="text-zinc-600 mt-1">
-                {forecast.location}, {forecast.state}
+                Current Location: {forecast.location}, {forecast.state} - TimeZone: {forecast.timeZone}
               </p>
 
               <div className="mt-4 grid gap-3 sm:grid-cols-3">
@@ -134,6 +198,7 @@ export default function Home() {
         
 
       </main>
+      
     </div>
   );
 }
