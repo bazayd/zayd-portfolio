@@ -102,9 +102,9 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center bg-zinc-50 font-sans">
-      <main className="w-full max-w-3xl py-32 px-10 bg-white">
+      <main className="w-full max-w-3xl py-16 sm:py-24 px-4 sm:px-10 bg-white">
         
-        <div className="grid grid-cols-2  place-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 place-items-center text-center sm:text-left">
 
           {/* <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
             Edit this file (page.tsx) 
@@ -137,7 +137,7 @@ export default function Home() {
           priority
           />
           <div className="flex flex-col justify-center items-center">
-            <h1 className="text-3xl text-black font-bold text-nowrap m-10">Brandon Arriaga</h1>
+            <h1 className="text-3xl text-black font-bold m-10">Brandon Arriaga</h1>
 
             <p className="text-black">Brandon Arriaga is currently a Data Analyst at San Jose State University for 
               the Facilities Development & Operations department.</p>
@@ -149,7 +149,7 @@ export default function Home() {
         <div className="mt-20 w-full rounded-lg border border-zinc-200 p-5">
           <h2 className="text-lg font-semibold text-black">Brandon's Weather Forecast</h2>
           <form className="w-full max-w-sm" onSubmit={handleSubmit}>
-            <div className="flex items-center border-b border-teal-500 py-2">
+            <div  className="flex flex-col sm:flex-row sm:items-center gap-2 border-b border-teal-500 py-2">
               <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
                value={locationInput}
                onChange={handleChange}
@@ -169,7 +169,7 @@ export default function Home() {
 
           {forecast && !loading && (
             <>
-              <p className="text-zinc-600 mt-1">
+              <p className="text-zinc-600 mt-1 break-words">
                 Current Location: {forecast.location}, {forecast.state} - TimeZone: {forecast.timeZone}
               </p>
 

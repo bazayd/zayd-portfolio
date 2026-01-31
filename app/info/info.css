@@ -5,9 +5,11 @@
 .embla__container {
   display: flex;
   touch-action: pan-y pinch-zoom;
+  will-change: transform;
 }
 
 .embla__slide {
   flex: 0 0 100%;
   min-width: 0;
+  padding: 0.5rem;
 }

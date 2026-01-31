@@ -28,7 +28,7 @@ const Navbar = () => {
 const Footer = () => {
   return (
     <footer className="h-10 m-4">
-      <div className="font-mono flex flex-col gap-2 sm:flex-row sm:justify-between items-center mx-auto">
+      <div className="font-mono flex flex-col gap-2 sm:flex-row sm:justify-between  items-center mx-auto">
         <a href="mailto:brandon.arriaga@sjsu.edu" className="hover:text-xl duration-300 ease-in-out"><h2 className="px-4 text-black">brandon.arriaga@sjsu.edu</h2></a>
         <a href="https://github.com/bazayd" target="_blank" className="hover:text-xl duration-300 ease-in-out"><h2 className="px-4 text-black">Github</h2></a>
         <a href="https://www.linkedin.com/in/brandonzayd/" target="_blank" className="hover:text-xl duration-300 ease-in-out"><h2 className="px-4 text-black">LinkedIn</h2></a>
