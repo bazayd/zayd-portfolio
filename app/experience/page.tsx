@@ -1,9 +1,9 @@
 export default function Experience() {
     return(
         <div className="min-h-screen items-center justify-between bg-zinc-50 py-10 font-sans ">
-            <div className="flex gap-x-10 px-8 py-6 items-start">
+            <div className="flex flex-col sm:flex-row gap-6 sm:gap-x-10 px-4 sm:px-8 py-6 items-start">
 
-                <div className="w-56 h-56">
+                <div className="w-32 h-32 sm:w-56 sm:h-56">
                     <img 
                     className="rounded-sm w-full h-full object-contain"
                     src="/sjsu_logo.png"
@@ -25,8 +25,8 @@ export default function Experience() {
                 </div>
             </div>
 
-            <div className="flex gap-x-10 px-8 py-6 items-start">
-                 <div className="w-56 h-56">
+            <div className="flex flex-col sm:flex-row gap-6 sm:gap-x-10 px-4 sm:px-8 py-6 items-start">
+                 <div className="w-32 h-32 sm:w-56 sm:h-56">
                     <img 
                     className="rounded-sm w-full h-full object-contain"
                     src="/cxi_logo.jpg"
@@ -47,8 +47,8 @@ export default function Experience() {
                 </div>
             </div>
 
-            <div className="flex gap-x-10 px-8 py-6 items-start">
-                 <div className="w-56 h-56">
+            <div className="flex flex-col sm:flex-row gap-6 sm:gap-x-10 px-4 sm:px-8 py-6 items-start">
+                 <div className="w-32 h-32 sm:w-56 sm:h-56">
                     <img 
                     className="rounded-sm w-full h-full object-contain"
                     src="/leaf_logo.png"

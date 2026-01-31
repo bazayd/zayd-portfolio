@@ -14,11 +14,11 @@ const Navbar = () => {
                   width={50}
                   height={50}
                   />
-        <div className="flex flex-column gap-2s divide-x">
-          <Link href={"/"} className="font-mono px-4 hover:text-xl duration-300 ease-in-out">Home</Link>
-          <Link href={"/experience"} className="font-mono px-4 hover:text-xl xl duration-300 ease-in-out">Experience</Link>
-          <Link href={"/projects"} className="font-mono px-4 hover:text-xl xl duration-300 ease-in-out">Projects</Link>
-          <Link href={"/info"} className="font-mono px-4 hover:text-xl xl duration-300 ease-in-out">More About Me</Link>
+        <div className="flex flex-wrap items-center gap-2 sm:gap-4">
+          <Link href={"/"} className="font-mono px-2 sm:px-4 hover:text-lg sm:hover:text-xl duration-300 ease-in-out">Home</Link>
+          <Link href={"/experience"} className="font-mono px-2 sm:px-4 hover:text-lg sm:hover:text-xl duration-300 ease-in-out">Experience</Link>
+          <Link href={"/projects"} className="font-mono px-2 sm:px-4 hover:text-lg sm:hover:text-xl duration-300 ease-in-out">Projects</Link>
+          <Link href={"/info"} className="font-mono px-2 sm:px-4 hover:text-lg sm:hover:text-xl duration-300 ease-in-out">More About Me</Link>
         </div>
       </div>
     </nav>
@@ -28,8 +28,8 @@ const Navbar = () => {
 const Footer = () => {
   return (
     <footer className="h-10 m-4">
-      <div className="font-mono flex flex-row mx-auto justify-between">
-        <a href="brandon.arriaga@sjsu.edu" className="hover:text-xl duration-300 ease-in-out"><h2 className="px-4 text-black">brandon.arriaga@sjsu.edu</h2></a>
+      <div className="font-mono flex flex-col gap-2 sm:flex-row sm:justify-between items-center mx-auto">
+        <a href="mailto:brandon.arriaga@sjsu.edu" className="hover:text-xl duration-300 ease-in-out"><h2 className="px-4 text-black">brandon.arriaga@sjsu.edu</h2></a>
         <a href="https://github.com/bazayd" target="_blank" className="hover:text-xl duration-300 ease-in-out"><h2 className="px-4 text-black">Github</h2></a>
         <a href="https://www.linkedin.com/in/brandonzayd/" target="_blank" className="hover:text-xl duration-300 ease-in-out"><h2 className="px-4 text-black">LinkedIn</h2></a>
         <h2 className="px-4 text-black hover:text-xl duration-300 ease-in-out">(408) 910-7199</h2>
