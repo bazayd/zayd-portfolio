@@ -8,7 +8,12 @@ import Navbar from "./components/Navbar";
 
 const Footer = () => {
   return (
-    <footer className="h-10 m-4">
+    <footer className="mt-8 mb-5 px-2 sm:px-0">
+      <div className="relative flex py-5 items-center">
+        <div className="flex-grow border-t border-gray-600"></div>
+        {/* <span className="flex-shrink mx-4 text-gray-400"></span> */}
+        <div className="flex-grow border-t border-gray-600"></div>
+      </div>
       <div className="font-mono flex flex-col gap-2 sm:flex-row sm:justify-between  items-center mx-auto">
         <a href="mailto:brandon.arriaga@sjsu.edu" className="hover:text-xl duration-300 ease-in-out"><h2 className="px-4 text-black">brandon.arriaga@sjsu.edu</h2></a>
         <a href="https://github.com/bazayd" target="_blank" className="hover:text-xl duration-300 ease-in-out"><h2 className="px-4 text-black">Github</h2></a>

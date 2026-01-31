@@ -46,16 +46,16 @@ export default function EmblaCarousel() {
 
             </div>
 
-            <div className='flex flex-col justify-start w-full md:w-1/2'>
-                <h1 className='text-2xl font-bold'>About me</h1>
-                <h2 className='text-base sm:text-lg leading-relaxed'>My name is Brandon Arriaga. I am currently a Data Analyst at San Jose State University, doing
+            <div className='flex flex-col justify-start w-full md:w-1/2 m-auto'>
+                <h1 className='text-2xl font-bold text-center m-2'>About me</h1>
+                <h1 className='text-2xl text-base sm:text-lg leading-relaxed m-2'>My name is Brandon Arriaga. I am currently a Data Analyst at San Jose State University, doing
                     an apprenticeship within work study in the Facilities Development & Operations Department. I have been with SJSU
                     for over a year now.
-                </h2>
-                <h2 className='text-base sm:text-lg leading-relaxed'>A little about my work ethic is that I enjoy problem solving and emphasizing attention-to-detail. I deliver
+                </h1>
+                <h1 className='text-2xl text-base sm:text-lg leading-relaxed m-2'>A little about my work ethic is that I enjoy problem solving and emphasizing attention-to-detail. I deliver
                     on time and put my all into my work. Here is how I often plan out my work:
-                </h2>
-                <ul className="list-disc list-inside pl-2 sm:pl-7 text-sm sm:text-md space-y-2">
+                </h1>
+                <ul className="list-disc list-inside ml-2 pl-2 sm:pl-7 text-sm sm:text-md space-y-2">
                     <li>I begin by understanding the problem and necessities of the business at hand. What is they are 
                         asking for and what is their invisioned endgoal.
                     </li>
@@ -75,7 +75,7 @@ export default function EmblaCarousel() {
             </div>
         </div>
 
-        <div className='flex flex-col gap-5 items-center mb-10'>
+        <div className='flex flex-col gap-5 items-center ml-4 mt-8'>
             <h1 className='text-2xl font-bold text-center'>Skills</h1>
             <h2 className='text-base sm:text-lg leading-relaxed'>
                 Programming Languages: JavaScript, TypeScript, Java, C/C++, Python, Golang, R, MySQL
@@ -88,6 +88,17 @@ export default function EmblaCarousel() {
                 <br />
                 Soft Skills: Attention to detail, Problem-solving, Collaboration, Communication, Adaptability,
                 Time Management, Organization.
+            </h2>
+        </div>
+
+        <div className='flex flex-col gap-5 items-center ml-4 mt-8'>
+            <h1 className='text-2xl font-bold text-center'>Hobbies & Interest</h1>
+            <h2 className='text-base sm:text-lg leading-relaxed'>
+                Outsides of work and school I enjoy spending time with my Girlfriend; We both enjoy
+                going to San Francisco, Photo Booths, Chipotle, and Matcha.
+                <br />
+                <br />
+                My interests include Muay Thai, Boxing, Jiu Jitsu, Reading, and Programming.
             </h2>
         </div>
     </div>
