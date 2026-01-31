@@ -27,13 +27,17 @@ export default function Navbar() {
   return (
     <nav className="p-3 text-black">
       <div className="container mx-auto flex items-center justify-between">
-        <img
+        <Link href="/">
+            <img
           className="rounded-full"
           src="/brandon_img.jpg"
           alt="Brandon profile photo"
           width={50}
           height={50}
-        />
+          />
+
+        </Link>
+        
 
         {/* desktop view */}
         <div className="hidden sm:flex flex-wrap items-center gap-2 sm:gap-4">
