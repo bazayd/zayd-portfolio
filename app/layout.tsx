@@ -2,28 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import Navbar from "./components/Navbar";
 
-const Navbar = () => {
-  return (
-    <nav className="p-3 text-black">
-      <div className="container mx-auto flex justify-between items-center">
-        <img
-                  className="rounded-full"
-                  src="/brandon_img.jpg"
-                  alt="Next.js logo"
-                  width={50}
-                  height={50}
-                  />
-        <div className="flex flex-wrap items-center gap-2 sm:gap-4">
-          <Link href={"/"} className="font-mono px-2 sm:px-4 hover:text-lg sm:hover:text-xl duration-300 ease-in-out">Home</Link>
-          <Link href={"/experience"} className="font-mono px-2 sm:px-4 hover:text-lg sm:hover:text-xl duration-300 ease-in-out">Experience</Link>
-          <Link href={"/projects"} className="font-mono px-2 sm:px-4 hover:text-lg sm:hover:text-xl duration-300 ease-in-out">Projects</Link>
-          <Link href={"/info"} className="font-mono px-2 sm:px-4 hover:text-lg sm:hover:text-xl duration-300 ease-in-out">More About Me</Link>
-        </div>
-      </div>
-    </nav>
-  )
-}
+
 
 const Footer = () => {
   return (
