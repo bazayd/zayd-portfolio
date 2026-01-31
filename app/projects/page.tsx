@@ -16,7 +16,7 @@ export default function Projects() {
 
                 <h1 className="invisible">hidden</h1>
                 <div className="flex flex-col">
-                    <h1 className="text-2xl m-5 text-nowrap font-bold">Student Portal</h1>
+                    <a href="https://github.com/bazayd/StudentPortalApplication" target="_blank"><h1 className="text-2xl m-5 text-nowrap font-bold hover:text-3xl duration-300 ease-in-out">Student Portal</h1></a>
                     <p>- Designed and developed an efficient and user-friendly student portal that allows students
                         to check, add, and drop classes. <br />
                         - Developed using Java with the SpringBoot Framework, using HTML, CSS, JavaScript, JDBC, MySQL, and 
@@ -25,7 +25,7 @@ export default function Projects() {
                 </div>
 
                 <div className="flex flex-col">
-                    <h1 className="text-2xl m-5 text-nowrap font-bold">Reel Vibes</h1>
+                    <a href="https://github.com/athehmd/ReelVibes" target="_blank"><h1 className="text-2xl m-5 text-nowrap font-bold hover:text-3xl duration-300 ease-in-out">Reel Vibes</h1></a>
                     <p>- Developed a movie & tv show recommendation and listing application that
                         displays movies, tv shows, along with their ratings, descriptions, and actor overview. <br />
                         - Application was developed in Python using the Flask framework along with HTML, CSS, Jinja, and JavaScript. MySQL 
@@ -36,7 +36,7 @@ export default function Projects() {
 
                 <h1 className="invisible">hidden</h1>
                 <div className="flex flex-col">
-                    <h1 className="text-2xl m-5 text-nowrap font-bold">Online Food Store</h1>
+                    <a href="https://github.com/bazayd/OnlineFoodStore" target="_blank"><h1 className="text-2xl m-5 text-nowrap font-bold hover:text-3xl duration-300 ease-in-out">Online Food Store</h1></a>
                     <p>- Led frontend development of the following application that allowed the user to
                         view, buy, and get groceries delivered to their location. <br />
                         - Frontend development was spearheaded in HTML, CSS, JavaScript using the React.js libary. Vite was the 
