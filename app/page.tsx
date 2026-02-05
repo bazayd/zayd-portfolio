@@ -101,7 +101,7 @@ export default function Home() {
   const [active, setActive] = useState(false)
 
   return (
-    <div className="flex flex-col items-center bg-zinc-50 font-sans">
+    <div className="flex flex-col items-center font-sans">
       <main className="w-full max-w-3xl py-16 sm:py-24 px-4 sm:px-10 bg-white">
         
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 place-items-center text-center sm:text-left">

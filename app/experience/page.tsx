@@ -14,8 +14,9 @@ export default function Experience() {
                 </div>
                 
                 <div className="flex-1 pl-4">
-                    <h2 className="text-black">Data Analyst</h2>
-                    <h2 className="text-black">San Jose State University FD&O</h2>
+                    <h2 className="text-black text-xl font-bold">Data Analyst</h2>
+                    <h2 className="text-black text-xl font-bold">San Jose State University FD&O</h2>
+                    <h2 className="text-black text-lg">Jan. 2025 - Present</h2>
                     <h2 className="text-black m-4">- Working as a Data Analyst for the Facilities Development & Operations Department.
                         Utilizing tools such as Excel, Power BI, Tableau, Python, Golang, JavaScript, and WebTMA to create reports, build dashboards,
                         develop scripts, and automate workflows.  <br />
@@ -36,8 +37,9 @@ export default function Experience() {
                     />
                 </div>
                 <div className="flex-1 pl-4">
-                    <h2 className="text-black">Lead Teller</h2>
-                    <h2 className="text-black">Currency Exchange International</h2>
+                    <h2 className="text-black text-xl font-bold">Lead Teller</h2>
+                    <h2 className="text-black text-xl font-bold">Currency Exchange International</h2>
+                    <h2 className="text-black text-lg">Oct. 2024 - Present</h2>
                     <h2 className="text-black m-4">- Managing daily teller operations such reconciling daily transactions, managing cash shipments, ensuring efficient and 
                         excellent customer service. <br />
                         - Showing extreme attention to detail and problem solving when resolving customer issues and special
@@ -58,8 +60,9 @@ export default function Experience() {
                     />
                 </div>
                 <div className="flex-1 pl-4">
-                    <h2 className="text-black">Student Mentor</h2>
-                    <h2 className="text-black">Latino Education Advancement Foundation</h2>
+                    <h2 className="text-black text-xl font-bold">Student Mentor</h2>
+                    <h2 className="text-black text-xl font-bold">Latino Education Advancement Foundation</h2>
+                    <h2 className="text-black text-lg">Jul. 2024 - Jun. 2025</h2>
                     <h2 className="text-black m-4">
                         - Guiding, coaching, and providing personalized support to first-year University
                         and college students. <br />

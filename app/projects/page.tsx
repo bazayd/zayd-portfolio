@@ -1,7 +1,17 @@
 export default function Projects() {
     return (
-        <div className="min-h-screen items-center justify-between bg-zinc-50 py-10 font-mono">
+        <div className="min-h-screen items-center justify-between py-10 font-mono">
             <div  className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 sm:px-8 lg:px-24 py-10 text-black">
+                <h1 className="invisible">hidden</h1>
+                <div className="flex flex-col">
+                    <a href="https://github.com/bazayd/zayd-portfolio" target="_blank"><h1 className="text-2xl m-5 text-nowrap font-bold hover:text-3xl duration-300 ease-in-out">Zayd's Portfolio</h1></a>
+                    <p>- The following portfolio was developed with HTML, CSS, and TypeScript. The React library was used
+                        for creating a strong interface along with Next.js as the framework for a full-stack feeling. <br />
+                        - Developed with intent to display my practical skills in full-stack development, through interactive user designed,
+                        REST APIs, and utilization of multiple components through library and framework development.
+                    </p>
+                </div>
+
                 <div className="flex flex-col">
                     <h1 className="text-2xl m-5 text-nowrap font-bold hover:text-3xl duration-300 ease-in-out">APPA Custodial Review </h1>
                     <p className="">- Developed metrics for custodial routes & maintenance through
