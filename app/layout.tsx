@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
+import { Analytics } from "@vercel/analytics/next"
+
 
 
 
@@ -52,6 +54,7 @@ export default function RootLayout({
       >
         <Navbar></Navbar>
         {children}
+        <Analytics />
         <Footer></Footer>
       </body>
     </html>

@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState, FormEvent } from 'react';
-import { Analytics } from "@vercel/analytics/next"
 
 
 export default function Gemini() {
