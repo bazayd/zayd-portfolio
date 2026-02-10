@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState, FormEvent } from 'react';
 
+
 type Period = {
   name: string;
   temperature: number;
@@ -100,6 +101,8 @@ export default function Home() {
 
   const [active, setActive] = useState(false)
 
+  
+
   return (
     <div className="flex flex-col items-center font-sans">
       <main className="w-full max-w-3xl py-16 sm:py-24 px-4 sm:px-10 bg-white">
@@ -195,7 +198,6 @@ export default function Home() {
             </>
           )}
         </div>
-        
 
       </main>
       

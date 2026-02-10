@@ -24,7 +24,7 @@ export default function EmblaCarousel() {
   }, [emblaApi])
 
   return (
-    <div className='flex flex-col min-h-screen justify-center bg-zinc-50 font-sans text-black '>
+    <div className='flex flex-col min-h-screen justify-center font-sans text-black '>
         <div className="flex flex-col md:flex-row gap-8 mt-10 px-4 sm:px-8">
             <div className="embla w-full md:w-1/2">
                 <div className="embla__viewport rounded-md overflow-hidden" ref={emblaRef}>
@@ -95,7 +95,7 @@ export default function EmblaCarousel() {
             <h1 className='text-2xl font-bold text-center'>Hobbies & Interest</h1>
             <h2 className='text-base sm:text-lg leading-relaxed'>
                 Outsides of work and school I enjoy spending time with my Girlfriend; We both enjoy
-                going to San Francisco, Photo Booths, Chipotle, and Matcha.
+                going to San Francisco, Photo Booths, eating Chipotle, and drinking Matcha.
                 <br />
                 <br />
                 My interests include Muay Thai, Boxing, Jiu Jitsu, Reading, and Programming.

@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/experience", label: "Experience" },
   { href: "/projects", label: "Projects" },
   { href: "/info", label: "More About Me" },
+  { href: "/news", label: "News"}
 ];
 
 export default function Navbar() {
